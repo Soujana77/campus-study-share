@@ -1,0 +1,79 @@
+/* Rating Stars Styles */
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars-container {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  padding: 0.125rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.star-btn:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.star-btn:disabled {
+  cursor: default;
+}
+
+.star-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.star-btn.filled .star-icon {
+  filter: drop-shadow(0 1px 2px rgba(212, 168, 29, 0.3));
+}
+
+.rated-text {
+  font-size: 0.75rem;
+  color: var(--secondary-dark);
+  font-weight: 500;
+}
+
+.login-prompt {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+/* Compact version for cards */
+.rating-stars.compact .star-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.rating-stars.compact .star-btn {
+  padding: 0.0625rem;
+}
+
+/* Display average rating */
+.rating-display {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.rating-value {
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.rating-count {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+.star-icon.small {
+  width: 16px;
+  height: 16px;
+}
